@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --grey-900: #141414;
+  --grey-800: #1f1f1f;
+  --grey-700: #333333;
+  --green: #c4f82a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background-color: var(--grey-900);
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 327px;
+  gap: 1.5rem;
+  padding: 1.5rem;
+
+  border-radius: 12px;
+  background-color: var(--grey-800);
+}
+
+.profile-image img {
+  width: 88px;
+  border-radius: 999px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-name {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  line-height: 150%;
+  color: white;
+}
+
+.profile-location {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--green);
+}
+
+.profile-bio {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; /* 14px */
+  line-height: 150%;
+  color: white;
+
+  text-align: center;
+}
+
+.profile-social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem; /* 16px */
+}
+
+.profile-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 279px;
+  height: 45px;
+  background-color: var(--grey-700);
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+    .profile-container {
+        max-width: 384px;
+        padding: 2.5rem;
+    }
+
+    .profile-social-links a {
+        width: 304px;
+    }
+
+    .profile-social-links a:hover {
+        background-color: var(--green);
+        color: var(--grey-700);
+    }
+}
